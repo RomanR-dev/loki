@@ -377,10 +377,6 @@ func (s *IngestLimits) running(ctx context.Context) error {
 			}
 
 			s.metrics.kafkaReadBytesTotal.Add(float64(sizeBytes))
-
-			if err := s.client.CommitRecords(ctx, fetches.Records()...); err != nil {
-				level.Error(s.logger).Log("msg", "error committing records", "err", err)
-			}
 		}
 	}
 }

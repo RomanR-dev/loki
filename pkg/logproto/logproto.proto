@@ -109,8 +109,7 @@ message StreamRate {
   uint32 pushes = 5;
 }
 
-message GetAssignedPartitionsRequest {
-}
+message GetAssignedPartitionsRequest {}
 
 message GetAssignedPartitionsResponse {
   map<int32, int64> assignedPartitions = 1;

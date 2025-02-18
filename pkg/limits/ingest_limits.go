@@ -242,7 +242,7 @@ func (s *IngestLimits) onPartitionsAssigned(_ context.Context, _ *kgo.Client, pa
 	}
 }
 
-func (s *IngestLimits) onPartitionsRevoked(_ context.Context, c *kgo.Client, partitions map[string][]int32) {
+func (s *IngestLimits) onPartitionsRevoked(_ context.Context, _ *kgo.Client, partitions map[string][]int32) {
 	s.removePartitions(partitions)
 }
 
